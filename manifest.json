@@ -1,0 +1,21 @@
+{
+  "name": "AI Calendar Assistant",
+  "short_name": "AI Calendar",
+  "description": "A smart calendar application that helps you organize your schedule with notes, reminders, and checklists for each day, week, and month. Use the integrated AI assistant to add reminders using natural language.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#111827",
+  "theme_color": "#1f2937",
+  "icons": [
+    {
+      "src": "/icon-192.svg",
+      "sizes": "192x192",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "/icon-512.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml"
+    }
+  ]
+}
