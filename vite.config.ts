@@ -5,9 +5,6 @@ import react from '@vitejs/plugin-react';
 export default defineConfig(({ mode }) => {
     const env = loadEnv(mode, '.', '');
     return {
-      // ADD THE 'base' PROPERTY HERE for GitHub Pages deployment
-      base: '/ZNCalendar/', 
-
       server: {
         port: 3000,
         host: '0.0.0.0',
