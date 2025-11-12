@@ -1,11 +1,5 @@
 import { GoogleGenAI, FunctionDeclaration, Type, FunctionCall } from '@google/genai';
 
-const API_KEY = process.env.API_KEY;
-
-if (!API_KEY) {
-  console.warn("API_KEY environment variable not set. AI features will not work.");
-}
-
 const addReminderFunctionDeclaration: FunctionDeclaration = {
   name: 'addReminder',
   parameters: {
@@ -70,6 +64,7 @@ const controlStopwatchFunctionDeclaration: FunctionDeclaration = {
 };
 
 export const processNaturalLanguageCommand = async (command: string) => {
+  const API_KEY = process.env.API_KEY;
   if (!API_KEY) {
     throw new Error("Gemini API key is not configured.");
   }
