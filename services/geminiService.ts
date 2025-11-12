@@ -27,7 +27,7 @@ const addAlarmFunctionDeclaration: FunctionDeclaration = {
     description: 'Adds an alarm. It can be a one-time alarm or a repeating one.',
     properties: {
       time: { type: Type.STRING, description: 'The time for the alarm in HH:MM (24-hour) format.' },
-      label: { type: Type.STRING, description: 'A descriptive label for the alarm.' },
+      label: { type: Type.STRING, description: 'An optional descriptive label for the alarm.' },
       repeat: { type: Type.BOOLEAN, description: 'Whether the alarm should repeat weekly.' },
       days: {
         type: Type.ARRAY,
@@ -35,7 +35,7 @@ const addAlarmFunctionDeclaration: FunctionDeclaration = {
         items: { type: Type.NUMBER },
       },
     },
-    required: ['time', 'label', 'repeat'],
+    required: ['time', 'repeat'],
   },
 };
 

@@ -95,5 +95,13 @@ export interface Holiday {
   date: string; // YYYY-MM-DD
 }
 
+export interface NotebookPage {
+  id: string;
+  title: string;
+  content: string;
+  createdAt: string; // ISO string
+  updatedAt: string; // ISO string
+}
+
 export type MainView = 'day' | 'week' | 'month' | 'year';
-export type AppView = 'calendar' | 'alarms' | 'timers' | 'stopwatch';
+export type AppView = 'calendar' | 'alarms' | 'timers' | 'stopwatch' | 'notebook';
