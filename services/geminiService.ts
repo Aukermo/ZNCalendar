@@ -64,7 +64,7 @@ const controlStopwatchFunctionDeclaration: FunctionDeclaration = {
 };
 
 export const processNaturalLanguageCommand = async (command: string) => {
-  const API_KEY = process.env.API_KEY;
+  const API_KEY = "AIzaSyAfE0cwaIyVrA4xjf4EKdZJ3y-bLQmqZq8";
   if (!API_KEY) {
     throw new Error("Gemini API key is not configured.");
   }

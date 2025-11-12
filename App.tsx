@@ -902,10 +902,14 @@ const App: React.FC = () => {
 
   const handleSidebarTabClick = (view: MainView | 'recurring') => { setSidebarContent(view); };
   
+  const handleAiButtonClick = () => {
+    setIsAiModalOpen(true);
+  };
+    
   const TopBar: React.FC = () => (
     <div className="flex items-center justify-between p-4 bg-gray-800 border-b border-gray-700">
         <div className="flex-1 flex justify-start">
-             <button onClick={() => setIsAiModalOpen(true)} className="p-2 rounded-full hover:bg-gray-700"><AiIcon/></button>
+             <button onClick={handleAiButtonClick} className="p-2 rounded-full hover:bg-gray-700" aria-label="Open AI Assistant"><AiIcon/></button>
         </div>
         <div className="flex-1 flex items-center justify-center gap-2 md:gap-4">
             {(['calendar', 'alarms', 'timers', 'stopwatch', 'notebook'] as AppView[]).map(view => (
